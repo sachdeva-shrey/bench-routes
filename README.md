@@ -24,16 +24,19 @@ The primary goals of the project are:
 1. Monitor:
     (a) System level details
     (b) Kernel and systemd logs
-    (c) Application behaviour
+    (c) Application behaviour (TODO)
     (d) Web application and its route-performance/analysis
     (e) Network
-    (f) Prometheus exporters (TODO)
 2. Benchmark:
-    (a) Web application load
+    (a) Web application load (TODO)
 3. Alert: on
     (a) Service/route state down
     (b) Errors/warnings in the kernel level
     (b) OOR in the instantaneous gauge value in res-delay & length
+    
+Bench-routes exposes details as a Prometheus exporter (on http://localhost:9990/metrics)
+that can be scraped by a Prometheus server and visuaized on Grafana. Long term storage
+options like Timescaledb could be used to store historic data.
 
 ```
 
@@ -65,29 +68,17 @@ Follow the commands to make the development process easier:
 1. Download [Postman](https://www.postman.com/downloads/) and Install it.
 2. Create a new collection.
 
-### To Check Service State
-1. Add request
-2. Select method **GET**
-3. Copy and Enter below request url  
-`http://localhost:9090/service-state` 
-4. Send the request to url.
-5. This API returns the state of the services (active or passive) in real-time.
-
-### To Get Routes Summary
-1. Add request
-2. Select method **GET**
-3. Copy and Enter below request url  
-`http://localhost:9090/routes-summary` 
-4. Send the request to url.
-5. This API returns the list of all URLs/Routes that are being monitored for testing using the application.
-
 For more information, regarding usage in different languages. Visit [Bench-Routes](https://documenter.getpostman.com/view/6521254/SzRuWqq9?version=latest).
  
-**Bench-routes** has been selected at :-
+**Bench-routes** is a mentoring project at :-
 1.[Rails Girls Summer of Code ](https://railsgirlssummerofcode.org/)
 2.[GirlScript Summer of Code 2020](https://www.gssoc.tech/)
 
-### 👬  Mentors
+### Supported by
+
+![JetBrains](https://user-images.githubusercontent.com/33792202/91298441-a9b0e880-e7bd-11ea-93da-76234f613fec.png)
+
+### 👬  Maintainers
 
 - Harkishen Singh (harkishensingh@hotmail.com)
 - Aquib Baig (aquibbaig97@gmail.com)
